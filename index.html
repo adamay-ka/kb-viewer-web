@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <base href="/kb-viewer-web/">
+
+  <meta charset="UTF-8">
+  <!-- 同じオリジンのファイルだけを読む。外への通信は掲示板の GitHub API だけ -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data: blob:; connect-src 'self' blob: data: https://api.github.com; frame-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="研修ノート">
+
+  <!-- iPhone：ホーム画面に追加して使う -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="研修ノート">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>研修ノート</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="kb_crypto.js"></script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
